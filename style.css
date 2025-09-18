@@ -34,23 +34,15 @@
   transform: scale(1.1);
 }
 
-.Thanh:hover {
-  transform: scale(1);
-}
-
 .tieude {
-  padding-top: 10px;
-  padding-left: 50px;
-  font-size: 20px;
-  font-weight: initial;
+  padding: 100px 20px;
   margin: 20px;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #fff;
   text-align: center;
-  padding: 100px 20px;
   background: url("./img/banh-trang-my-long-ben-tre-banh-trang-nuong-san-thien-that-2.jpg")
     no-repeat center center;
   background-size: cover;
+  border-radius: 8px;
 }
 
 .tieude #tua1 {
@@ -78,6 +70,7 @@
   animation: expand 0.7s ease-out forwards;
   animation-delay: 0.09s;
 }
+
 @keyframes expand {
   from {
     width: 0;
@@ -107,8 +100,7 @@
 }
 
 .nd h3 {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .nd p {
@@ -120,17 +112,7 @@
   border-radius: 10%;
   max-width: 400px;
   height: auto;
-}
-
-@media (max-width: 800px) {
-  .mobai {
-    flex-direction: column;
-    text-align: center;
-  }
-  .mobai .anh,
-  .mobai .nd {
-    order: initial;
-  }
+  border: 1px solid black;
 }
 
 .thanbai {
@@ -140,24 +122,9 @@
   padding: 50px;
 }
 
-.thanbai .anh {
-  order: 1;
-}
 .thanbai .nd2 {
   margin-left: 20px;
-  order: 2;
   font-size: 20px;
-}
-
-@media (max-width: 800px) {
-  .thanbai {
-    flex-direction: column;
-    text-align: center;
-  }
-  .thanbai .anh,
-  .thanbai .nd2 {
-    order: initial;
-  }
 }
 
 .ketbai {
@@ -177,22 +144,32 @@
   font-size: 28px;
 }
 
-.nd3 h3 {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 20px;
-}
-
 .nd3 p {
   font-size: 20px;
   line-height: 1.6;
 }
+
 @media (max-width: 800px) {
+  .mobai,
+  .thanbai,
   .ketbai {
     flex-direction: column;
     text-align: center;
   }
+
+  .mobai .anh,
+  .mobai .nd,
+  .thanbai .anh,
+  .thanbai .nd2,
   .ketbai .anh,
   .ketbai .nd3 {
     order: initial;
+  }
+
+  .ketbai .nd3 {
+    order: 1;
+  }
+  .ketbai .anh {
+    order: 2;
   }
 }
